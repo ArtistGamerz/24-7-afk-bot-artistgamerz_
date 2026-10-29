@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: minecraft-24-7-afk-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MC_HOST
+        sync: false
+      - key: MC_PORT
+        value: "25565"
+      - key: MC_VERSION
+        value: "auto"
+      - key: BOT_USERNAME
+        value: "AFK_Bot_24_7"
+      - key: BOT_AUTH
+        value: "offline"
+      - key: WEB_PORT
+        value: "3000"
